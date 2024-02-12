@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-size="medium">
+  <head>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/bubbles.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <meta charset="UTF-16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BirbBerry</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="home.html"
+          ><img
+            id="logoimg"
+            src="pictures/logo.png"
+            alt="BirbBerry logo"
+            title="BirbBerry" /></a
+        ><br />
+        <a href="/home.html" class="logo-link">BirbBerry</a>
+      </div>
+      <br />
+
+      <div class="topnav" id="myTopnav">
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contacts.html">Contacts</a>
+        <a href="/login.html">Log in</a>
+        <a href="/register.html">Register</a>
+        <a href="/game.html" class="active">Game</a>
+        <!-- <a href="/schema.html">Schema</a> -->
+        <form action="" class="search-form">
+          <input type="text" placeholder="Search" class="search-input" />
+          <button type="submit" class="search-btn">
+            <img
+              class="search-img"
+              src="/pictures/searchIcon.svg"
+              alt=""
+              width="27"
+              height="27"
+            />
+          </button>
+        </form>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="hamburgerMenuClick()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+      </div>
+    </header>
+    <main>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="card-text">
+            Current Mode:
+            <button
+              type="button"
+              data-theme-toggle
+              aria-label="Change to light theme"
+            >
+              Change to light theme
+            </button>
+            <br />
+            <label for="header-size">Header font size</label>
+            <select name="header-size" id="header-size">
+              <option value="small">small</option>
+              <option value="medium" selected>medium</option>
+              <option value="large">large</option>
+            </select>
+            <br />
+            <label for="header-color">Header Color:</label>
+            <input type="color" name="header-color" id="header-color" />
+          </div>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+      <canvas id="confetti-canvas"> </canvas>
+      <div class="container-card">
+        <div class="card" id="gamecard">
+          <h1 class="header">Guess The NUMBER!</h1>
+          <div class="card-text" id="card-text">
+            <label class="game-details" for="fGuessNumber"
+              >Guess the Number (1 - 100)</label
+            >
+            <br />
+            <input name="fGuessNumber" id="input-number" type="number" />
+            <button class="game-btn red-bg" id="btn-reset">Reset</button>
+            <button class="game-btn" id="btn-submit">Submit</button>
+            <br />
+            <b class="game-details">attempts: <span id="attempts">0</span></b>
+            <br />
+            <b class="game-details">guessed: [<span id="guessArr"></span>]</b>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+      <script>
+        let resetBtn = document.getElementById("btn-reset");
+        let submitBtn = document.getElementById("btn-submit");
+        let attemptsText = document.getElementById("attempts");
+        let guessArrText = document.getElementById("guessArr");
+        let myCanvas = document.getElementById("confetti-canvas");
+        let inputNumber = document.getElementById("input-number");
+        let attempts = 0;
+        let guessArr = [];
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * max);
+        }
+        let randomNumber = getRandomInt(100);
+        console.log(randomNumber);
+        resetBtn.addEventListener("click", function () {
+          document.getElementsByName("fGuessNumber")[0].value = "";
+          document.getElementById("attempts").innerText = 0;
+          randomNumber = getRandomInt(100);
+          console.log(randomNumber);
+          //guessArrText.value = "";
+          document.getElementById("guessArr").innerText = "";
+        });
+        submitBtn.addEventListener("click", function () {
+          let guess = document.getElementsByName("fGuessNumber")[0].value;
+          inputNumber.value = "";
+          if (guess == "") {
+            alert("Please enter a number");
+          } else if (guess < 1 || guess > 100) {
+            alert("Please enter a number between 1 and 100");
+          } else {
+            attempts++;
+            attemptsText.setAttribute("value", attempts);
+            attemptsText.innerText = attempts;
+            //guessArr.push(guess);
+            if (randomNumber > guess) {
+              guessArr.push(" " + guess + " you guessed too low");
+              guessArrText.innerText = guessArr;
+            } else if (randomNumber < guess) {
+              guessArr.push(" " + guess + " you guessed too high");
+              guessArrText.innerText = guessArr;
+            }
+            //guessArrText.innerText = guessArr;
+            if (randomNumber == guess) {
+              alert("You guessed correctly!");
+              var myConfetti = confetti.create(myCanvas, {
+                resize: true,
+                useWorker: true,
+              });
+              myConfetti({
+                particleCount: 300,
+                spread: 200,
+                // any other options from the global
+                // confetti function
+              });
+              resetBtn.remove();
+              submitBtn.remove();
+              document.getElementById("input-number").remove();
+              let cardText = document.getElementById("gamecard");
+              cardText.innerHTML +=
+                "<br/><h1 class'header'>CONGRATULATIONS</h1><br/><button class='game-btn' id='restart-btn'>Restart</button>";
+              let restartBtn = document.getElementById("restart-btn");
+              restartBtn.addEventListener("click", function () {
+                location.reload();
+              });
+            } else if (randomNumber > guess) {
+              //alert("You guessed too low!");
+              let cardText = document.getElementById("gamecard");
+              //cardText.innerHTML +=
+              //"<br/><h1 class'header'>You guessed too low!</h1><br/>";
+            } else if (randomNumber < guess) {
+              //alert("You guessed too high!");
+              let cardText = document.getElementById("gamecard");
+              //cardText.innerHTML +=
+              //"<br/><h1 class'header'>You guessed too high!</h1><br/>";
+            }
+          }
+        });
+      </script>
+    </main>
+    <div class="bubbles">
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 25"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 21"></span>
+      <span style="--i: 18"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 26"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 22"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 28"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 22"></span>
+      <span style="--i: 23"></span>
+      <span style="--i: 19"></span>
+      <span style="--i: 20"></span>
+      <span style="--i: 27"></span>
+      <span style="--i: 29"></span>
+      <span style="--i: 30"></span>
+      <span style="--i: 11"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 14"></span>
+      <span style="--i: 25"></span>
+      <span style="--i: 13"></span>
+      <span style="--i: 21"></span>
+      <span style="--i: 18"></span>
+      <span style="--i: 12"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 26"></span>
+      <span style="--i: 10"></span>
+      <span style="--i: 22"></span>
+      <span style="--i: 15"></span>
+      <span style="--i: 17"></span>
+      <span style="--i: 28"></span>
+      <span style="--i: 16"></span>
+      <span style="--i: 22"></span>
+      <span style="--i: 23"></span>
+      <span style="--i: 19"></span>
+      <span style="--i: 20"></span>
+      <span style="--i: 27"></span>
+      <span style="--i: 29"></span>
+      <span style="--i: 30"></span>
+    </div>
+    <!-- <footer>
+        <div class="nav-footer">
+            <ul class="navfooter-ul">
+                <li><a href="#">Go to top</a></li>
+            </ul>
+        </div>
+    </footer> -->
+    <script src="js/settings.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

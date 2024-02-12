@@ -1,0 +1,82 @@
+.fake-header {
+    width: 100vw;
+    background-color: #555;
+    height: 150px;
+    position: relative;
+    text-align: center;
+
+}
+
+.fake-nav {
+    width: 100vw;
+    margin: 20px;
+    background-color: #dfd898;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
+
+}
+
+.fake-logo {
+    height: 50px;
+    width: 50px;
+    background-color: #aa1010;
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+.fake-main {
+    width: 100vw;
+    background-color: #2a7bb1;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+
+
+}
+
+.fake-sidebar-ads {
+    width: 250px;
+    background-color: #2ab14c;
+    height: 500px;
+    float: right;
+    margin: 20px;
+    text-align: center;
+}
+
+.fake-container {
+    width: 700px;
+    background-color: #2ab1b1;
+    height: 500px;
+    float: left;
+    margin: 20px;
+}
+
+.fake-footer {
+    width: 100vw;
+    background-color: #dfd898;
+    height: 50px;
+    bottom: 0;
+    text-align: center;
+}
+
+.fake-card {
+    width: 500px;
+    background-color: #bd70c4;
+    height: 400px;
+    margin: 50px;
+    position: absolute;
+    justify-content: center;
+}
+
+.fake-ads {
+    width: 200px;
+    background-color: #2aa1b1;
+    height: 300px;
+    margin: 50px;
+    position: absolute;
+    text-align: center;
+}

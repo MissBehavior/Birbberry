@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-size="medium">
+
+<head>
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/bubbles.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/tags.css" />
+  <link href="css/bootstrap-grid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <meta charset="UTF-16" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BirbBerry</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
+      <a href="/home.html" class="logo-link">BirbBerry</a>
+    </div>
+    <br />
+
+    <div class="topnav" id="myTopnav">
+      <a href="/home.html" class="active">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contacts.html">Contacts</a>
+      <a href="/login.html">Log in</a>
+      <a href="/register.html">Register</a>
+      <a href="/game.html">Game</a>
+      <!-- <a href="/schema.html">Schema</a> -->
+      <form action="" class="search-form">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button type="submit" class="search-btn">
+          <img class="search-img" src="/pictures/searchIcon.svg" alt="" width="27" height="27" />
+        </button>
+      </form>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+    </div>
+
+  </header>
+  <main>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+
+        <div class="card-text">
+          Current Mode:
+          <button type="button" data-theme-toggle aria-label="Change to light theme">
+            Change to light theme
+          </button>
+          <br>
+          <label for="header-size">Header font size</label>
+          <select name="header-size" id="header-size">
+            <option value="small">small</option>
+            <option value="medium" selected>medium</option>
+            <option value="large">large</option>
+          </select>
+          <br>
+          <label for="header-color">Header Color:</label>
+          <input type="color" name="header-color" id="header-color" />
+        </div>
+        <span class="close">&times;</span>
+      </div>
+      </div>
+
+      <div class="tags">
+        <!-- <button onclick="filterPosts('all')">All</button>
+        <button onclick="filterPosts('availableForVisit')">Available for visit</button>
+        <button onclick="filterPosts('availableForAdoption')">Available for adoption</button> -->
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center ">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForVisit">
+
+                <div class="card">
+
+                  <img src="pictures/pic_quaker.png" alt="Quaker" style="background-color: white" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForVisit')" class="cardtag"><b>availableForVisit</b></div>
+                  <div class="card-text">
+
+                    <h1><b>Quaker</b></h1>
+                    <p>
+                      Quaker parakeets are also called Monk parakeets and Quaker
+                      Parrots. They are a medium sized parrot with a long tail and
+                      they are about the size of a cockatiel but a little bit
+                      stockier. Wild Quakers are mainly green in color with grey on
+                      their chests and head. They also have blue primary flight
+                      feathers and blue under their tails. Their coloration provides
+                      excellent camouflage against the colors of their native habitat.
+                      Quaker parrots that have been domestically bred also come in
+                      other colors like light blue and yellow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForVisit">
+                <div class="card">
+                  <img src="pictures/cockatiel.jpg" alt="cockatiel" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForVisit')" class="cardtag"><b>availableForVisit</b></div>
+
+                  <div class="card-text">
+                    <h1>Cockatiel Parrot</h1>
+                    <p>
+                      Cockatiels, often affectionately called "tiels," are a popular
+                      choice among bird enthusiasts. These small to medium-sized
+                      parrots are recognized for their distinctive crest of feathers
+                      on their heads, which they can raise and lower as a form of
+                      communication. Cockatiels come in various color mutations,
+                      including the classic gray with yellow crests and cheek patches.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForAdoption">
+                <div class="card">
+                  <img src="pictures/lovebird.jfif" alt="lovebird" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForAdoption')" class="cardtag"><b>availableForAdoption</b></div>
+
+                  <div class="card-text">
+                    <h1>Lovebird Parrot</h1>
+                    <p>
+                      Lovebirds are adorable and diminutive parrots, cherished for
+                      their affectionate behavior and charming personalities. They
+                      come in various species, including Peach-faced Lovebirds and
+                      Fischer's Lovebirds, each displaying distinct color patterns and
+                      markings on their bodies. These parrots are known for forming
+                      strong bonds with their human companions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForAdoption">
+                <div class="card">
+                  <img src="pictures/Budgerigar Parrot.jpg" alt="Budgerigar" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForAdoption')" class="cardtag"><b>availableForAdoption</b></div>
+
+                  <div class="card-text">
+                    <h1>Budgerigar Parrot</h1>
+                    <p>
+                      Budgerigars, often affectionately called "Budgies," are a
+                      delightful and charismatic species of parrot that have captured
+                      the hearts of bird enthusiasts around the world. Despite their
+                      small size, these avian wonders are big on personality,
+                      intelligence, and charm.
+                      <br />
+                      <br />
+                      Budgerigars are native to Australia, where they inhabit a wide
+                      range of environments, from arid regions to lush coastal areas.
+                      In the wild, their plumage typically showcases bright green
+                      feathers with distinctive black and yellow markings on the wings
+                      and back. These natural colors help them blend seamlessly into
+                      their native Australian landscapes, providing a natural defense
+                      against predators.
+                      <br />
+                      <br />
+                      One of the most endearing traits of Budgerigars is their ability
+                      to form strong bonds with their human companions. They thrive on
+                      interaction and socialization, and with proper care, they can
+                      become affectionate members of the family. Their social nature
+                      makes them excellent pets for both beginners and experienced
+                      bird owners.
+                      <br />
+                      <br />
+                      One of the most remarkable aspects of Budgerigars is their
+                      aptitude for vocalization. While they may not rival larger
+                      parrot species in terms of speech, Budgies are renowned for
+                      their chirping, singing, and mimicry. They can learn to mimic a
+                      variety of sounds, from household noises to tunes and phrases,
+                      providing endless entertainment for their owners.
+                      <br />
+                      <br />
+                      In the world of aviculture, Budgerigars are famous for their
+                      vibrant color mutations, which have been selectively bred over
+                      the years. These mutations have resulted in a stunning array of
+                      Budgie colors, including shades of blue, yellow, violet, and
+                      white, among others. Each mutation showcases its unique charm
+                      and beauty, making Budgerigars a favorite among bird breeders
+                      and collectors.
+                      <br />
+                      <br />
+                      Caring for Budgerigars involves providing them with a spacious
+                      cage, a balanced diet of seeds, fresh fruits, and vegetables, as
+                      well as plenty of mental and physical stimulation. Regular
+                      interaction and playtime outside the cage are essential for
+                      their well-being. With proper care and attention, these little
+                      parrots can live for up to 10-15 years or more.
+                      <br />
+                      <br />
+                      In summary, Budgerigar Parrots, with their petite stature and
+                      boundless personality, have carved out a special place in the
+                      world of avian companionship. Their charming disposition,
+                      vibrant colors, and ability to communicate in their unique way
+                      make them a beloved choice for bird enthusiasts of all ages.
+                      Whether you're a first-time bird owner or an experienced avian
+                      aficionado, Budgies are sure to enchant you with their playful
+                      antics and joyful presence in your life.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForVisit">
+                <div class="card">
+                  <img src="pictures/Eclectus Parrot.jfif" alt="Eclectus" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForVisit')" class="cardtag"><b>availableForVisit</b></div>
+
+                  <div class="card-text">
+                    <h1>Eclectus Parrot</h1>
+                    <p>
+                      Eclectus Parrots are sexually dimorphic, meaning males and
+                      females have strikingly different plumage. Males are
+                      predominantly green with bright orange beaks, while females
+                      display striking red and blue plumage. Their captivating
+                      appearance and gentle nature make them sought-after pets.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForVisit">
+                <div class="card">
+                  <img src="pictures/kakapo.jpg" alt="kakapo" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForVisit')" class="cardtag"><b>availableForVisit</b></div>
+
+                  <div class="card-text">
+                    <h1>Kakapo</h1>
+                    <p>
+                      The Kakapo, also known as the Night Parrot or Owl Parrot, is one
+                      of the world's most intriguing and enigmatic parrot species.
+                      Native to New Zealand, these flightless, nocturnal birds have
+                      captured the imaginations of naturalists and bird enthusiasts
+                      alike with their unique characteristics, conservation story, and
+                      remarkable charm.
+                      <br /><br />
+                      Kakapos are truly distinctive in the avian world. They are large
+                      parrots, often referred to as "parrots of the night" due to
+                      their nocturnal habits. These charismatic birds are primarily
+                      herbivorous, feasting on a diet of native New Zealand fruits,
+                      leaves, and seeds. Their appearance is equally remarkable,
+                      featuring mossy-green feathers mottled with brown and streaked
+                      with yellow, which serve as excellent camouflage in their forest
+                      habitat.
+                      <br /><br />
+                      One of the most exceptional aspects of Kakapos is their
+                      extraordinary longevity. These birds can live for several
+                      decades, with some individuals reaching ages well over 90 years.
+                      This longevity is one of the factors contributing to their
+                      survival through millennia.
+                      <br /><br />
+                      However, Kakapos are perhaps best known for their unique
+                      breeding behavior. Unlike most parrots, Kakapos engage in a lek
+                      breeding system, where males gather at specific locations and
+                      compete for the attention of females through vocal displays and
+                      elaborate courtship rituals. The booming calls of male Kakapos
+                      can carry through the forest for miles, making them one of the
+                      most distinct sounds of New Zealand's night.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForAdoption">
+                <div class="card">
+                  <img src="pictures/Caique Parrot.webp" alt="Caique Parrot" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+
+                  <div onclick="filterPosts('availableForAdoption')" class="cardtag"><b>availableForAdoption</b></div>
+
+                  <div class="card-text">
+                    <h1>Caique Parrot</h1>
+                    <p>
+                      Caiques are playful and mischievous parrots that come in two
+                      main species: the Black-headed Caique and the White-bellied
+                      Caique. These medium-sized parrots are known for their vibrant
+                      green and white plumage and are adored for their spirited antics
+                      and clownish behavior
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-container" data-tags="availableForVisit">
+                <div class="card">
+                  <img src="pictures/Amazon Parrot.jpg" alt="Amazon Parrot" />
+                  <div onclick="filterPosts('all')" class="cardtag bluebg"><b>all</b></div>
+                  <div onclick="filterPosts('availableForVisit')" class="cardtag"><b>availableForVisit</b></div>
+
+                  <div class="card-text">
+                    <h1>Amazon Parrot</h1>
+                    <p>
+                      Amazon Parrots, a diverse and captivating family of parrot
+                      species, have earned their place as one of the most beloved and
+                      cherished birds in the world of aviculture. Renowned for their
+                      vibrant plumage, engaging personalities, and incredible vocal
+                      talents, Amazon Parrots offer a wide range of experiences to
+                      those fortunate enough to share their lives with these feathered
+                      companions.
+                      <br />
+                      <br />
+                      Native to Central and South America, Amazon Parrots inhabit a
+                      variety of ecosystems, from lush rainforests to arid savannas.
+                      They are known for their stunning diversity, with over 30
+                      different species identified, each possessing unique
+                      characteristics and coloration. While some Amazon Parrots
+                      display predominantly green plumage, others exhibit vibrant
+                      patterns and colors on their heads, wings, and bodies, creating
+                      a visual feast for bird enthusiasts.
+
+                      <br />
+                      <br />
+                      One of the most striking features of Amazon Parrots is their
+                      exceptional speaking ability. These intelligent birds have the
+                      potential to develop an extensive vocabulary, often impressing
+                      their human companions with their mimicry and articulation. The
+                      Yellow-headed Amazon, for instance, is particularly renowned for
+                      its exceptional speaking talents. They are not only vocal but
+                      also highly expressive, using their voices to convey their moods
+                      and emotions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <aside class="sidebar-ads flex-md-column flex-sm-row">
+              <div class="ads">
+                <img src="pictures/prafulpashte-foodbanner.gif" alt="" class="ads-img" />
+              </div>
+              <div class="ads">
+                <img src="pictures/foodnyamad.gif" class="ads-img" alt="" />
+              </div>
+            </aside>
+          </div>
+
+
+  </main>
+  <div class="bubbles">
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+  </div>
+  <footer>
+    <div class="nav-footer">
+      <ul class="navfooter-ul">
+        <li><a href="#">Go to top</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/settings.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+
+
+</html>

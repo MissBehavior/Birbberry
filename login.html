@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/bubbles.css" />
+  <link rel="stylesheet" href="styles/register.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="css/font-awesome.css">
+
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
+  <meta charset="UTF-16" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BirbBerry</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
+      <a href="/home.html" class="logo-link">BirbBerry</a>
+    </div>
+    <br />
+    <div class="topnav" id="myTopnav">
+      <a href="/home.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contacts.html">Contacts</a>
+      <a href="/login.html" class="active">Log in</a>
+      <a href="/register.html">Register</a>
+      <a href="/game.html">Game</a>
+      <!-- <a href="/schema.html">Schema</a> -->
+      <form action="" class="search-form">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button type="submit" class="search-btn">
+          <img class="search-img" src="/pictures/searchIcon.svg" alt="" width="27" height="27" />
+        </button>
+      </form>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+    </div>
+  </header>
+  <main>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+                
+        <div class="card-text">
+            Current Mode:
+            <button type="button" data-theme-toggle aria-label="Change to light theme">
+                Change to light theme
+            </button>
+            <br>
+            <label for="header-size">Header font size</label>
+            <select name="header-size" id="header-size">
+                <option value="small">small</option>
+                <option value="medium" selected>medium</option>
+                <option value="large">large</option>
+            </select>
+            <br>
+            <label for="header-color">Header Color:</label>
+            <input type="color" name="header-color" id="header-color" />
+        </div>
+        <span class="close">&times;</span>
+</div>
+
+    </div>
+    <div class="card-register">
+      <div class="card-text">
+        <form method="post" action="" class="register-form-container">
+          <label for="fEmail">Email</label>
+          <input type="email" placeholder="Email" name="fEmail" />
+          <label for="fPassword">Password</label>
+          <input type="password" placeholder="*************" name="fPassword" />
+          <button class="LoginBtn" type="submit">Log in</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <div class="bubbles">
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+  </div>
+  <footer>
+    <div class="nav-footer">
+      <ul class="navfooter-ul">
+        <li><a href="#">Go to top</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    var form = document.querySelector(".register-form-container");
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (validate(form)) {
+        alert("Login successful!");
+        alert(
+          "Email: " +
+          form.fEmail.value +
+          "\nPassword: " +
+          form.fPassword.value
+        );
+      } else {
+        alert("Login failed!");
+      }
+    });
+
+    function validate(form) {
+      if (form.fEmail.value == "") {
+        alert("Error: Email cannot be blank!");
+        form.fEmail.focus();
+        return false;
+      } else {
+        var re = /\S+@\S+\.\S+/;
+        if (!re.test(form.fEmail.value)) {
+          alert("Error: Email must contain @ and .");
+          form.fEmail.focus();
+          return false;
+        }
+      }
+      if (form.fPassword.value == "") {
+        alert("Error: Password cannot be blank!");
+        form.fPassword.focus();
+        return false;
+      } else {
+        var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if (!re.test(form.fPassword.value)) {
+          alert(
+            "Error: Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          );
+          form.fPassword.focus();
+          return false;
+        }
+      }
+      return true;
+    }
+  </script>
+  <script src="js/settings.js"></script>
+</body>
+
+</html>

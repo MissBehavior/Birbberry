@@ -1,0 +1,87 @@
+.register-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+main {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.card-register {
+  /* Add shadows to create the "card" effect */
+  background-color: #04aa6d11;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid #04aa6d11;
+}
+.card-register img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card-register input {
+  border-radius: 5px;
+  background-color: #04aa6d7a;
+  padding: 5px;
+  border: 1px solid #04aa6d11;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-register input:focus {
+  box-shadow: 0 8px 16px 0 hsla(191, 67%, 59%, 0.302);
+}
+
+#checkbox {
+  height: 18px;
+  width: 18px;
+  align-self: center;
+}
+
+#checkbox {
+  accent-color: #04aa6d;
+}
+
+.card-register button {
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.card-register button:hover {
+  background-color: #ddd;
+  color: #0c192c;
+}
+/* On mouse-over, add a deeper shadow */
+.card-register:hover {
+  box-shadow: 0 8px 16px 0 hsla(191, 67%, 59%, 0.302);
+}
+
+.card-register label {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}

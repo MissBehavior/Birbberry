@@ -1,0 +1,280 @@
+=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/about.css" />
+  <link rel="stylesheet" href="styles/bubbles.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link href="css/bootstrap-grid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/font-awesome.css">
+
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
+  <meta charset="UTF-16" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BirbBerry</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
+      <a href="/home.html" class="logo-link">BirbBerry</a>
+    </div>
+    <br />
+    <div class="topnav" id="myTopnav">
+      <a href="/home.html">Home</a>
+      <a href="/about.html" class="active">About</a>
+      <a href="/contacts.html">Contacts</a>
+      <a href="/login.html">Log in</a>
+      <a href="/register.html">Register</a>
+      <a href="/game.html">Game</a>
+      <!-- <a href="/schema.html">Schema</a> -->
+      <form action="" class="search-form">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button type="submit" class="search-btn">
+          <img class="search-img" src="/pictures/searchIcon.svg" alt="" width="27" height="27" />
+        </button>
+      </form>
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+    </div>
+  </header>
+  <main>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+                
+        <div class="card-text">
+            Current Mode:
+            <button type="button" data-theme-toggle aria-label="Change to light theme">
+                Change to light theme
+            </button>
+            <br>
+            <label for="header-size">Header font size</label>
+            <select name="header-size" id="header-size">
+                <option value="small">small</option>
+                <option value="medium" selected>medium</option>
+                <option value="large">large</option>
+            </select>
+            <br>
+            <label for="header-color">Header Color:</label>
+            <input type="color" name="header-color" id="header-color" />
+        </div>
+        <span class="close">&times;</span>
+</div>
+
+
+
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <a target="_blank" href="pictures/parrotrescue-about.jpg">
+                  <img src="pictures/parrotrescue-about.jpg" alt="Forest" class="about-img" />
+                </a>
+                <div class="card-text">
+                  <h1>Welcome to Iowa Parrot Rescue!</h1>
+                  <br /><br />
+                  Discover a sanctuary where the chatter and vibrant colors of
+                  feathered friends fill the air! At Iowa Parrot Rescue, we
+                  are dedicated to providing a haven for parrots in need of
+                  care and compassion. Our founder, featured in the
+                  heartwarming scene of a gentle interaction with a stunning
+                  Military Macaw, embodies the spirit of our mission: to
+                  rescue, rehabilitate, and rehome these intelligent and
+                  majestic birds.
+                  <br />
+                  <br />
+                  Nestled within our spacious indoor facility, each bird finds
+                  a slice of paradise. From the intricate network of natural
+                  perches to the riot of colorful toys that decorate our
+                  space, we’ve created an environment that caters to the
+                  physical and psychological well-being of our avian
+                  residents. It's a place where the squawks of joy and
+                  flutters of activity never cease, as each parrot embarks on
+                  a journey towards a hopeful future.
+                  <br /><br />
+                  Our commitment extends beyond rescue; we educate and
+                  advocate for the proper care and understanding of these
+                  complex creatures. With community support and the dedication
+                  of our volunteers, we strive to make a difference in the
+                  lives of parrots, one feathered friend at a time.
+                  <br /><br />
+                  Join us in our quest to offer a second chance to these
+                  incredible birds. Whether you're looking to adopt,
+                  volunteer, or support our cause, you're always welcome at
+                  Iowa Parrot Rescue – where every parrot has a story and
+                  every helping hand creates a brighter future.
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <a target="_blank" href="pictures/rescueparrot.webp">
+                  <img src="pictures/rescueparrot.webp" alt="Forest" class="about-img" />
+                </a>
+                <div class="card-text">
+                  <h1>Come Visit Us at Iowa Parrot Rescue!</h1>
+                  <br /><br />
+                  Step into a world where the love for birds is contagious! At
+                  Iowa Parrot Rescue, not only do we provide a sanctuary for
+                  parrots in need, but we also open our doors to bird
+                  enthusiasts and compassionate souls who wish to experience
+                  the joy these birds bring into our lives.
+                  <br /><br />
+                  Our delightful indoor paradise, as shown with one of our
+                  happy visitors sharing a moment with a resplendent Hyacinth
+                  Macaw, invites you to witness the bond between humans and
+                  birds. This gentleman's smile is a testament to the
+                  fulfilling encounters that await you here.
+                  <br /><br />
+                  Wearing his humor with pride, his t-shirt playfully reads,
+                  "Just a girl who loves doves and birds," symbolizing our
+                  inclusive and light-hearted environment. It's a place where
+                  laughter mingles with bird calls, and where everyone,
+                  regardless of age or background, can find a feathery friend
+                  to connect with.
+                  <br /><br />
+                  Our array of educational talks, interactive sessions, and
+                  hands-on activities make every visit memorable. Whether
+                  you're a seasoned bird lover or new to the world of avian
+                  wonders, there's always something new to learn and
+                  experience.
+                  <br /><br />
+                  So why wait? Spread your wings and come visit us at Iowa
+                  Parrot Rescue! It's not just a visit; it's an adventure that
+                  could lead to a lifetime of love and companionship with one
+                  of nature's most remarkable creatures.
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="card">
+                <a target="_blank" href="pictures/babyrescue.jfif">
+                  <img src="pictures/babyrescue.jfif" alt="Forest" class="about-img" />
+                </a>
+                <div class="card-text">
+                  <h1>
+                    Meet Our Feathered Youngsters at Iowa Parrot Rescue!
+                  </h1>
+                  <br /><br />
+                  Get ready to have your heartstrings tugged by the charming
+                  antics of our baby parrots! At Iowa Parrot Rescue, we're not
+                  just a haven for adult parrots, but also a nurturing ground
+                  for the young ones finding their way in the world. The
+                  picture captures the adorable curiosity of a young African
+                  Grey parrot, engaging with a toy bell, an enchanting moment
+                  that exemplifies the playful and inquisitive nature of our
+                  avian juveniles.
+                  <br /><br />
+                  With soft, grey plumage and eyes full of wonder, our baby
+                  parrots like this little one are sure to enchant you with
+                  their playful behaviors and eager learning. It's a joyous
+                  sight to see them interact with the world around them,
+                  developing their skills and personalities.
+                  <br /><br />
+                  When you visit us, you'll have the opportunity to witness
+                  these early stages of life, where every new sound and
+                  texture is an adventure for our feathered friends. You'll
+                  see firsthand the care and dedication that goes into raising
+                  these intelligent birds, ensuring they grow up healthy and
+                  socialized.
+                  <br /><br />
+                  Whether you're considering adopting a parrot or simply want
+                  to enjoy their youthful antics, our doors are open. Come
+                  experience the magic of new life and the tender beginnings
+                  of bird-human friendships at Iowa Parrot Rescue. It's a
+                  visit that promises to be as educational as it is
+                  heartwarming!
+                  <br /><br />
+                  This text aims to draw attention to the special experience
+                  of interacting with baby parrots at your rescue center,
+                  highlighting the emotional and educational aspects of such
+                  an encounter.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+          <aside class="sidebar-ads flex-md-column flex-sm-row">
+            <div class="ads">
+              <img src="pictures/prafulpashte-foodbanner.gif" alt="" class="ads-img" />
+            </div>
+            <div class="ads">
+              <img src="pictures/foodnyamad.gif" class="ads-img" alt="" />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <style></style>
+  <div class="bubbles">
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+    <span style="--i: 11"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 14"></span>
+    <span style="--i: 25"></span>
+    <span style="--i: 13"></span>
+    <span style="--i: 21"></span>
+    <span style="--i: 18"></span>
+    <span style="--i: 12"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 26"></span>
+    <span style="--i: 10"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 15"></span>
+    <span style="--i: 17"></span>
+    <span style="--i: 28"></span>
+    <span style="--i: 16"></span>
+    <span style="--i: 22"></span>
+    <span style="--i: 23"></span>
+    <span style="--i: 19"></span>
+    <span style="--i: 20"></span>
+    <span style="--i: 27"></span>
+    <span style="--i: 29"></span>
+    <span style="--i: 30"></span>
+  </div>
+  <footer>
+    <div class="nav-footer">
+      <ul class="navfooter-ul">
+        <li><a href="#">Go to top</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/settings.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

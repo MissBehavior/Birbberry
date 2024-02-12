@@ -1,0 +1,114 @@
+/* Inherritance Selector task for Contacts.html */
+
+.title-h1 {
+  font-size: var(--font-size);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Limit bubble spawn location */
+.container {
+  /* width: 100%;
+  display: flex; */
+}
+
+.card-columns {
+  background-color: #04aa6d15;
+  /* padding-top: 1%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.sidebar-ads {
+  display: flex;
+  /* padding-right: 10px;
+  padding-left: 10px; */
+}
+
+.ads {
+  /* margin-top: 50px; */
+  border: 2px solid grey;
+  /* margin-bottom: 50px; */
+}
+.ads-img {
+  width: 100%;
+}
+.about-img {
+  width: 100%;
+}
+.contacts-img {
+  object-fit: cover;
+}
+
+.contacts-ads {
+  position: absolute;
+  right: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #04aa6d15;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #04aa6df1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #04aa6ddd;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: #04aa6d11;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
+  transition: 0.3s;
+  display: inline-block;
+  /*text follows image*/
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid #04aa6d11;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #4fc2dc4d;
+}
+
+.card::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 60%;
+}
+
+.card h1 {
+  font-size: var(--font-size);
+  text-align: center;
+  color: var(--header-color);
+}
+
+.card-text {
+  padding: 2px 16px;
+  color: #04aa6df1;
+}
