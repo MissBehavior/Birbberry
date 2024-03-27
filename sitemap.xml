@@ -4,11 +4,15 @@
 
     <url>
 
-        <loc>http://127.0.0.1:5500/home.html</loc>
+        <loc>http://127.0.0.1:5500/index.html</loc>
+        <loc>http://127.0.0.1:5500/services.html</loc>
         <loc>http://127.0.0.1:5500/about.html</loc>
         <loc>http://127.0.0.1:5500/contacts.html</loc>
         <loc>http://127.0.0.1:5500/login.html</loc>
         <loc>http://127.0.0.1:5500/register.html</loc>
+        <loc>http://127.0.0.1:5500/game.html</loc>
+        <loc>http://127.0.0.1:5500/blog.html</loc>
+        <loc>http://127.0.0.1:5500/faq.html</loc>
 
     </url>
 

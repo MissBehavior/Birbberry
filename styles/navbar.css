@@ -58,7 +58,7 @@ h1 {
 }
 
 body {
-  background: var(--color-bg);
+  background: var(--color-bg) !important;
   font-family: "Trebuchet MS", "Tahoma", "Arial", sans-serif;
   font-size: 16px;
   position: relative;

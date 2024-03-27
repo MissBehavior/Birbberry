@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-size="medium">
+  <head>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/bubbles.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/tags.css" />
+    <link rel="stylesheet" href="styles/blog.css" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <meta charset="UTF-16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BirbBerry</title>
+  </head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-NYJ1882RQQ");
+  </script>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
+        <a href="index.html" class="logo-link">BirbBerry</a>
+      </div>
+      <br />
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="login.html">Log in</a>
+        <a href="register.html">Register</a>
+        <a href="game.html">Game</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <!-- <a href="/schema.html">Schema</a> -->
+        <form action="" class="search-form">
+          <input type="text" placeholder="Search" class="search-input" />
+          <button type="submit" class="search-btn">
+            <img class="search-img" src="pictures/searchIcon.svg" alt="" width="27" height="27" />
+          </button>
+        </form>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+      </div>
+    </header>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYJ1882RQQ"></script>
+
+    <main>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="card-text">
+            Current Mode:
+            <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+            <br />
+            <label for="header-size">Header font size</label>
+            <select name="header-size" id="header-size">
+              <option value="small">small</option>
+              <option value="medium" selected>medium</option>
+              <option value="large">large</option>
+            </select>
+            <br />
+            <label for="header-color">Header Color:</label>
+            <input type="color" name="header-color" id="header-color" />
+          </div>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+
+      <!-- Blog 1 -->
+      <div class="card-register">
+        <h1 class="blog-title">Title Bla bla bla</h1>
+        <h3 class="blog-date">Updated at: 20.02.2024</h3>
+        <div id="fb-root"></div>
+        <script>
+          (function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          })(document, "script", "facebook-jssdk");
+        </script>
+
+        <!-- Your share button code -->
+        <div class="fb-share-button" data-href="http://127.0.0.1:5501/blog.html" data-layout="button_count"></div>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=Blog1&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false"
+          >Tweet #Blog1</a
+        >
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <img class="blog-img" src="pictures/blog1.jpg" width="600" height="400" alt="Image of a Gecko" />
+
+        <p class="blog-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sunt pariatur odio eligendi eius recusandae dolores exercitationem commodi
+          rerum illo inventore quae repellat, aut earum rem? Doloribus, cum deleniti. Repudiandae! Lorem Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Optio expedita nihil voluptas, facere suscipit nesciunt quas sint, commodi laborum explicabo debitis accusantium quaerat
+          corrupti nisi aut dicta fugiat placeat impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit hic fuga eligendi
+          cum quae, dicta error nisi quas tenetur facere saepe aut ducimus, perferendis asperiores at qui amet? Minus. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Fugit temporibus vero amet eligendi quos animi repellendus, perferendis aut deleniti saepe est? Porro eaque
+          sit delectus cupiditate ipsa aliquid magnam repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe, amet quos
+          magnam necessitatibus ducimus commodi accusamus pariatur ut quaerat culpa ad. Facere labore officiis iure fugiat excepturi nulla fugit.
+        </p>
+      </div>
+      <!-- Blog 2 -->
+      <div class="card-register">
+        <h1 class="blog-title">Title Bla bla bla</h1>
+        <h3 class="blog-date">Updated at: 20.02.2024</h3>
+        <div id="fb-root"></div>
+        <script>
+          (function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          })(document, "script", "facebook-jssdk");
+        </script>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=Blog2&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false"
+          >Tweet #Blog2</a
+        >
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- Your share button code -->
+        <div class="fb-share-button" data-href="http://127.0.0.1:5501/blog.html" data-layout="button_count"></div>
+        <img class="blog-img" src="pictures/blog2.jpg" width="600" height="400" alt="Image of a Kakapo" />
+
+        <p class="blog-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sunt pariatur odio eligendi eius recusandae dolores exercitationem commodi
+          rerum illo inventore quae repellat, aut earum rem? Doloribus, cum deleniti. Repudiandae! Lorem Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Optio expedita nihil voluptas, facere suscipit nesciunt quas sint, commodi laborum explicabo debitis accusantium quaerat
+          corrupti nisi aut dicta fugiat placeat impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit hic fuga eligendi
+          cum quae, dicta error nisi quas tenetur facere saepe aut ducimus, perferendis asperiores at qui amet? Minus. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Fugit temporibus vero amet eligendi quos animi repellendus, perferendis aut deleniti saepe est? Porro eaque
+          sit delectus cupiditate ipsa aliquid magnam repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe, amet quos
+          magnam necessitatibus ducimus commodi accusamus pariatur ut quaerat culpa ad. Facere labore officiis iure fugiat excepturi nulla fugit.
+        </p>
+      </div>
+      <!-- Blog 3 -->
+      <div class="card-register">
+        <h1 class="blog-title">Title Bla bla bla</h1>
+        <h3 class="blog-date">Updated at: 20.02.2024</h3>
+        <div id="fb-root"></div>
+        <script>
+          (function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          })(document, "script", "facebook-jssdk");
+        </script>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=Blog3&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false"
+          >Tweet #Blog3</a
+        >
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- Your share button code -->
+        <div class="fb-share-button" data-href="http://127.0.0.1:5501/blog.html" data-layout="button_count"></div>
+        <img class="blog-img" src="pictures/blog3.webp" alt="Image of a Quacker" />
+
+        <p class="blog-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sunt pariatur odio eligendi eius recusandae dolores exercitationem commodi
+          rerum illo inventore quae repellat, aut earum rem? Doloribus, cum deleniti. Repudiandae! Lorem Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Optio expedita nihil voluptas, facere suscipit nesciunt quas sint, commodi laborum explicabo debitis accusantium quaerat
+          corrupti nisi aut dicta fugiat placeat impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci impedit hic fuga eligendi
+          cum quae, dicta error nisi quas tenetur facere saepe aut ducimus, perferendis asperiores at qui amet? Minus. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Fugit temporibus vero amet eligendi quos animi repellendus, perferendis aut deleniti saepe est? Porro eaque
+          sit delectus cupiditate ipsa aliquid magnam repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt saepe, amet quos
+          magnam necessitatibus ducimus commodi accusamus pariatur ut quaerat culpa ad. Facere labore officiis iure fugiat excepturi nulla fugit.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="nav-footer">
+        <ul class="navfooter-ul">
+          <li><a href="#">Go to top</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/settings.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

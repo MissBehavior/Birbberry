@@ -1,0 +1,74 @@
+.card-register {
+    /* Add shadows to create the "card" effect */
+    background-color: #04aa6d11;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342);
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 50px;
+    /* margin-top: 30px; */
+    margin-bottom: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid #04aa6d11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.card-register:last-child {
+    margin-bottom: 150px;
+}
+
+.blog-title, .blog-date, .blog-text {
+    color: #f2f2f2;
+}
+
+.blog-text {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-register img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.blog-img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* On mouse-over, add a deeper shadow */
+.card-register:hover {
+    box-shadow: 0 8px 16px 0 hsla(191, 67%, 59%, 0.302);
+}
+
+.card-register label {
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: stretch;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

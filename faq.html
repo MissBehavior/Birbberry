@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-size="medium">
+  <head>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/bubbles.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/tags.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <meta charset="UTF-16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BirbBerry</title>
+  </head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-NYJ1882RQQ");
+  </script>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
+        <a href="index.html" class="logo-link">BirbBerry</a>
+      </div>
+      <br />
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="login.html">Log in</a>
+        <a href="register.html">Register</a>
+        <a href="game.html">Game</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <!-- <a href="/schema.html">Schema</a> -->
+        <form action="" class="search-form">
+          <input type="text" placeholder="Search" class="search-input" />
+          <button type="submit" class="search-btn">
+            <img class="search-img" src="pictures/searchIcon.svg" alt="" width="27" height="27" />
+          </button>
+        </form>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
+      </div>
+    </header>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYJ1882RQQ"></script>
+
+    <main>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="card-text">
+            Current Mode:
+            <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
+            <br />
+            <label for="header-size">Header font size</label>
+            <select name="header-size" id="header-size">
+              <option value="small">small</option>
+              <option value="medium" selected>medium</option>
+              <option value="large">large</option>
+            </select>
+            <br />
+            <label for="header-color">Header Color:</label>
+            <input type="color" name="header-color" id="header-color" />
+          </div>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+      <!-- FAQ SECTION -->
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What species of birds can be found at the sanctuary?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              The sanctuary houses a diverse range of bird species including parrots, toucans, owls, eagles, and various tropical birds native to the
+              region.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Are there any rare or endangered bird species housed in the sanctuary?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, we are proud to host several rare and endangered bird species as part of our conservation efforts. These include the Bali myna,
+              California condor, and Philippine eagle.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Can visitors interact with the birds or are they strictly for observation?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              While direct interaction with the birds is limited to ensure their well-being, visitors can enjoy observing them in their natural
+              habitats throughout the sanctuary.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Can you tell us more about the geckos in the sanctuary? How do they coexist with the bird population, and what role do they play in the
+              ecosystem of the sanctuary?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Our geckos play a vital role in the ecosystem of the sanctuary by helping control insect populations, including pests that may affect
+              the bird habitats. They coexist peacefully with the birds, primarily inhabiting separate areas within the sanctuary. Our staff closely
+              monitors their populations to ensure a balanced ecosystem.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Is photography permitted within the sanctuary, and are there any restrictions on capturing images of the birds?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Photography is permitted within designated areas of the sanctuary. However, flash photography is not allowed as it can startle the
+              birds. We also request visitors to respect the privacy of the birds during nesting periods.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FAQ SECTION END-->
+    </main>
+    <footer>
+      <div class="nav-footer">
+        <ul class="navfooter-ul">
+          <li><a href="#">Go to top</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/settings.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
