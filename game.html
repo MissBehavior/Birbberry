@@ -23,13 +23,7 @@
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"
-          ><img
-            id="logoimg"
-            src="pictures/logo.png"
-            alt="BirbBerry logo"
-            title="BirbBerry" /></a
-        ><br />
+        <a href="index.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
         <a href="index.html" class="logo-link">BirbBerry</a>
       </div>
       <br />
@@ -42,24 +36,16 @@
         <a href="login.html">Log in</a>
         <a href="register.html">Register</a>
         <a href="game.html" class="active">Game</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
         <!-- <a href="/schema.html">Schema</a> -->
         <form action="" class="search-form">
           <input type="text" placeholder="Search" class="search-input" />
           <button type="submit" class="search-btn">
-            <img
-              class="search-img"
-              src="pictures/searchIcon.svg"
-              alt=""
-              width="27"
-              height="27"
-            />
+            <img class="search-img" src="pictures/searchIcon.svg" alt="" width="27" height="27" />
           </button>
         </form>
-        <a
-          href="javascript:void(0);"
-          class="icon"
-          onclick="hamburgerMenuClick()"
-        >
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
           <i class="fa fa-bars"></i>
         </a>
         <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
@@ -71,13 +57,7 @@
         <div class="modal-content">
           <div class="card-text">
             Current Mode:
-            <button
-              type="button"
-              data-theme-toggle
-              aria-label="Change to light theme"
-            >
-              Change to light theme
-            </button>
+            <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
             <br />
             <label for="header-size">Header font size</label>
             <select name="header-size" id="header-size">
@@ -97,9 +77,7 @@
         <div class="card" id="gamecard">
           <h1 class="header">Guess The NUMBER!</h1>
           <div class="card-text" id="card-text">
-            <label class="game-details" for="fGuessNumber"
-              >Guess the Number (1 - 100)</label
-            >
+            <label class="game-details" for="fGuessNumber">Guess the Number (1 - 100)</label>
             <br />
             <input name="fGuessNumber" id="input-number" type="number" />
             <button class="game-btn red-bg" id="btn-reset">Reset</button>
@@ -171,8 +149,7 @@
               submitBtn.remove();
               document.getElementById("input-number").remove();
               let cardText = document.getElementById("gamecard");
-              cardText.innerHTML +=
-                "<br/><h1 class'header'>CONGRATULATIONS</h1><br/><button class='game-btn' id='restart-btn'>Restart</button>";
+              cardText.innerHTML += "<br/><h1 class'header'>CONGRATULATIONS</h1><br/><button class='game-btn' id='restart-btn'>Restart</button>";
               let restartBtn = document.getElementById("restart-btn");
               restartBtn.addEventListener("click", function () {
                 location.reload();

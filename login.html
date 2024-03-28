@@ -24,13 +24,7 @@
   <body>
     <header>
       <div class="logo">
-        <a href="index.html"
-          ><img
-            id="logoimg"
-            src="pictures/logo.png"
-            alt="BirbBerry logo"
-            title="BirbBerry" /></a
-        ><br />
+        <a href="index.html"><img id="logoimg" src="pictures/logo.png" alt="BirbBerry logo" title="BirbBerry" /></a><br />
         <a href="index.html" class="logo-link">BirbBerry</a>
       </div>
       <br />
@@ -42,24 +36,16 @@
         <a href="login.html" class="active">Log in</a>
         <a href="register.html">Register</a>
         <a href="game.html">Game</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
         <!-- <a href="/schema.html">Schema</a> -->
         <form action="" class="search-form">
           <input type="text" placeholder="Search" class="search-input" />
           <button type="submit" class="search-btn">
-            <img
-              class="search-img"
-              src="pictures/searchIcon.svg"
-              alt=""
-              width="27"
-              height="27"
-            />
+            <img class="search-img" src="pictures/searchIcon.svg" alt="" width="27" height="27" />
           </button>
         </form>
-        <a
-          href="javascript:void(0);"
-          class="icon"
-          onclick="hamburgerMenuClick()"
-        >
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenuClick()">
           <i class="fa fa-bars"></i>
         </a>
         <a id="tester" href="#about"><i class="fa fa-cog"></i></a>
@@ -71,13 +57,7 @@
         <div class="modal-content">
           <div class="card-text">
             Current Mode:
-            <button
-              type="button"
-              data-theme-toggle
-              aria-label="Change to light theme"
-            >
-              Change to light theme
-            </button>
+            <button type="button" data-theme-toggle aria-label="Change to light theme">Change to light theme</button>
             <br />
             <label for="header-size">Header font size</label>
             <select name="header-size" id="header-size">
@@ -98,11 +78,7 @@
             <label for="fEmail">Email</label>
             <input type="email" placeholder="Email" name="fEmail" />
             <label for="fPassword">Password</label>
-            <input
-              type="password"
-              placeholder="*************"
-              name="fPassword"
-            />
+            <input type="password" placeholder="*************" name="fPassword" />
             <button class="LoginBtn" type="submit">Log in</button>
           </form>
         </div>
@@ -169,12 +145,7 @@
         event.preventDefault();
         if (validate(form)) {
           alert("Login successful!");
-          alert(
-            "Email: " +
-              form.fEmail.value +
-              "\nPassword: " +
-              form.fPassword.value
-          );
+          alert("Email: " + form.fEmail.value + "\nPassword: " + form.fPassword.value);
         } else {
           alert("Login failed!");
         }
@@ -200,9 +171,7 @@
         } else {
           var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
           if (!re.test(form.fPassword.value)) {
-            alert(
-              "Error: Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-            );
+            alert("Error: Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
             form.fPassword.focus();
             return false;
           }

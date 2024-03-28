@@ -13,3 +13,6 @@ function filterPosts(tag) {
         }
     });
 }
+function redirect() {
+    window.location.href = "https://www.pinterest.com/vikkijaku/birbberry/";
+}

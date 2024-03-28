@@ -45,7 +45,25 @@
     height: 100%;
 }
 
+.pinterestBtn {
+    background-color: red;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: bold;
+}
 
+.pinterestBtn i {
+    font-weight: large;
+}
+
+.shareBtn {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 
 /* On mouse-over, add a deeper shadow */
